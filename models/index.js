@@ -23,11 +23,11 @@ const db={};
 db.Sequelize=Sequelize;
 db.sequelize=sequelize;
 
-db.Category=require("./category.model")(Sequelize,sequelize);
-db.Product=require("./product.model")(Sequelize,sequelize);
-db.User=require("./user.model")(Sequelize,sequelize);
-db.Role=require("./role.model")(Sequelize,sequelize);
-db.Cart=require("./cart.model")(Sequelize,sequelize);
+db.Category=require(path.join(__dirname,"./category.model"))(Sequelize,sequelize);
+db.Product=require(path.join(__dirname,"./product.model"))(Sequelize,sequelize);
+db.User=require(path.join(__dirname,"./user.model"))(Sequelize,sequelize);
+db.Role=require(path.join(__dirname,"./role.model"))(Sequelize,sequelize);
+db.Cart=require(path.join(__dirname,"./cart.model"))(Sequelize,sequelize);
 
 db.Role.belongsToMany(db.User,{
     through:"user_roles",
