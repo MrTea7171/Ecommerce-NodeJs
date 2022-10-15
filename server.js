@@ -33,11 +33,11 @@ require(path.join(__dirname,"./routes/cart.routes"))(app);
 
 //Create Mock Roles
 
-ROLES.forEach(element=>{
-    Role.create({
-        name:element
-    });
-});
+// ROLES.forEach(element=>{
+//     Role.create({
+//         name:element
+//     });
+// });
 
 
 
