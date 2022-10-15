@@ -1,4 +1,5 @@
-const { Cart, Product, User } = require("../models");
+const path=require("path");
+const { Cart, Product, User } = require(path.join(__dirname,"../models"));
 
 
 exports.create=async(req,res)=>{

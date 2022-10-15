@@ -1,4 +1,5 @@
-const {Product,Sequelize}=require("../models");
+const path=require("path");
+const {Product,Sequelize}=require(path.join(__dirname,"../models"));
 
 exports.create=function(req,res)
 {

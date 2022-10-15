@@ -1,5 +1,6 @@
-const categoryControllers=require("../controllers/categories.controllers");
-const {requestValidator,authJWT}=require("../middleware");
+const path=require("path");
+const categoryControllers=require(path.join(__dirname,"../controllers/categories.controllers"));
+const {requestValidator,authJWT}=require(path.join(__dirname,"../middleware"));
 
 module.exports=(app)=>{
 

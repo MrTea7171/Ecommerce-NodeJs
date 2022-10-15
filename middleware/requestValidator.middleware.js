@@ -1,4 +1,5 @@
-const {Category}=require("../models");
+const path=require("path");
+const {Category}=require(path.join(__dirname,"../models"));
 
 const validateCategoryRequest=(req,res,next)=>{
     if(!req.body.name)

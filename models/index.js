@@ -1,5 +1,6 @@
+const path=require("path");
 const env=process.env.NODE_ENV || 'development';
-const dbConfig=require(path.join)[env];
+const dbConfig=require(path.join(__dirname,"../config/db.config"))[env];
 const Sequelize=require('sequelize');
 
 const sequelize=new Sequelize(

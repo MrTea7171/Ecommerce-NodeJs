@@ -1,5 +1,6 @@
+const path=require("path");
 const jwt=require("jsonwebtoken");
-const {User}=require("../models")
+const {User}=require(path.join(__dirname,"../models"));
 
 verifyToken=(req,res,next)=>{
     let token=req.headers["x-access-token"];

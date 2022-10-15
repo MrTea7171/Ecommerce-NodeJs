@@ -1,4 +1,5 @@
-const { User,ROLES } = require("../models");
+const path=require("path");
+const { User,ROLES } = require(path.join(__dirname,"../models"));
 
 const checkDuplicateDetails=(req,res,next)=>{
 

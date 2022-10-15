@@ -1,4 +1,5 @@
-const {User}=require("../models")
+const path=require("path");
+const {User}=require(path.join(__dirname,"../models"))
 
 exports.getAll=(req,res)=>{
     User.findAll()

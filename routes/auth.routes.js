@@ -1,5 +1,6 @@
-const {signUpValidator,requestValidator}=require("../middleware")
-const authController=require("../controllers/auth.controllers")
+const path=require("path");
+const {signUpValidator,requestValidator}=require(path.join(__dirname,"../middleware"));
+const authController=require(path.join(__dirname,"../controllers/auth.controllers"));
 
 module.exports=(app)=>{
 

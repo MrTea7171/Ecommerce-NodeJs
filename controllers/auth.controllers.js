@@ -1,4 +1,5 @@
-const { Sequelize, User, Role, ROLES } = require('../models')
+const path=require("path");
+const { Sequelize, User, Role, ROLES } = require(path.join(__dirname,'../models'))
 const bcrypt = require('bcrypt')
 const jwt=require("jsonwebtoken")
 

@@ -1,5 +1,6 @@
-const {authJWT}=require("../middleware");
-const cartControllers=require("../controllers/cart.controllers");
+const path=require("path");
+const {authJWT}=require(path.join(__dirname,"../middleware"));
+const cartControllers=require(path.join(__dirname,"../controllers/cart.controllers"));
 
 module.exports=(app)=>{
 

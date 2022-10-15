@@ -1,4 +1,5 @@
-const db=require("../models");
+const path=require("path");
+const db=require(path.join(__dirname,"../models"));
 const Category=db.Category;
 
 exports.create=function(req,res)
