@@ -10,7 +10,7 @@ exports.create=async(req,res)=>{
     const cart_data={};
 
     const cart=await Cart.create(cart_data);
-    cart.setUser(user);
+    await cart.setUser(user);
 
     res.status(200).send("Cart is ready");
 };

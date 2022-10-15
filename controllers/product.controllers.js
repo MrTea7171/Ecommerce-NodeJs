@@ -2,6 +2,12 @@ const {Product,Sequelize}=require("../models");
 
 exports.create=function(req,res)
 {
+    if(!req.isAdmin)
+    {
+        return res.status(403).send({
+            message: `Oops You are Unauthorised for this action!!`
+          });
+    }
     const {name,description,cost,categoryId}=req.body;
 
     const product={
@@ -13,7 +19,6 @@ exports.create=function(req,res)
 
     Product.create(product)
     .then(product=>{
-        console.log(`Category ${product.name} created succesfully`);
         res.status(201).send(product);
     })
     .catch((err)=>

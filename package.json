@@ -1,6 +1,11 @@
 {
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "jest"
+  },
+  "jest":
+  {
+    "collectCoverage":true
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

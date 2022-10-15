@@ -10,7 +10,6 @@ app.use(bodyParser.json())
 
 const db=require('./models');
 
-
 db.sequelize.sync({force:false})
 .then(()=>{
     console.log("Db Scyn");
