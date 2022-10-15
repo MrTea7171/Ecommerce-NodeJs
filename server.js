@@ -1,3 +1,4 @@
+const path=require("path");
 const serverConfig = require(path.join(__dirname,'./config/server.config'));
 const express=require('express');
 const bodyParser=require("body-parser");
